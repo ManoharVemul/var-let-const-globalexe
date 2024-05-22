@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            text-shadow:rgb(220, 10, 143) ;
+            font-size: 15px;
+
+        }
+    </style>
+
+</head>
+<body>
+   
+<pre>
+
+    <h3>var</h3>
+
+    Var
+Before the advent of ES6, var declarations ruled. There are issues associated with variables declared with var, though. That is why it was necessary for new ways to declare variables to emerge. First, let's get to understand var more before we discuss those issues.
+
+Scope of var
+Scope essentially means where these variables are available for use. var declarations are globally scoped or function/locally scoped.
+
+The scope is global when a var variable is declared outside a function. This means that any variable that is declared with var outside a function block is available for use in the whole window.
+
+var is function scoped when it is declared within a function. This means that it is available and can be accessed only within that function.
+
+To understand further, look at the example below.
+<p>
+    <br>
+    <h3>Understanding Global execution context</h3> is like having a backstage pass to a concert — you get a glimpse of what’s happening behind the scenes. Here’s why it’s essential:
+<b>Variable Scope: </b>
+Execution context defines where variables and functions are accessible, helping you avoid unexpected behavior or conflicts in your code.
+<br><b>Function Execution: </b>It’s the key to understanding how functions are called and how their execution context interacts with the call stack.
+Hoisting: Execution context plays a role in hoisting, the behavior where variable and function declarations are moved to the top of their containing scope during compilation.
+<br><b>Closures:</b> To grasp closures fully, you need to understand how execution contexts maintain access to their outer lexical environments, enabling functions to “remember” variables from their parent scopes.
+<br><b>Debugging:</b> A solid understanding of execution context is invaluable for debugging, as it allows you to trace the flow of your code and identify issues effectively.
+<br><b>Understanding the Call Stack</b>
+In the world of JavaScript execution context, the call stack is a fundamental concept that acts as a backstage manager, keeping track of function calls and orchestrating their execution. It’s a vital component of how JavaScript manages the flow of your code.
+
+<b>The Call Stack: </b>A Function Tracker
+
+At its core, the call stack is a data structure — a stack, to be precise — that operates on the “last in, first out” (LIFO) principle. Imagine it as a stack of plates where each plate represents a function call in your code. When a function is invoked, a new plate (or frame) is added to the top of the stack. When the function completes, its plate is removed from the stack.
+
+
+<b>Managing Function Execution</b>
+
+Let’s explore how the call stack manages function execution:
+
+<b>Function Invocation: </b>When a function is called, a new execution context is created for that function. This context includes information about the function’s variables, parameters, and its place in the overall code execution.
+<br><b>Pushing onto the Stack:</b> The newly created execution context is pushed onto the call stack, becoming the active context. This means the function’s code is now in control, and it will execute its statements sequentially.
+<br><b>Stacking Up Calls:</b> If a function calls another function, a new execution context for the called function is created and pushed onto the stack on top of the calling function’s context. This forms a stack of contexts, with the most recently called function on top.
+<br><b>Popping Off the Stack:</b> When a function completes its execution (reaches the end of its code or returns a value), its execution context is popped off the stack. The control returns to the context below it.
+<br><b>Repeating the Process:</b> This push-pop mechanism continues as functions are called and return their results, ensuring that the JavaScript code is executed in the correct order.
+   </pre> 
+</body>
+</html>
